@@ -1,0 +1,302 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 120px;
+	grid-template-areas: 'sec-1',
+	'sec-2',
+	'sec-3',
+	'footer';
+	grid-gap: 10px;
+}
+#sec-1 {
+	background-image: url('pharmacy.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	grid-area: 'sec-1';
+
+}
+#top-sec {
+	display: flex;
+	justify-content: space-between;
+}
+#top-h2 {
+	margin-top: 5px;
+	margin-left: 5px;
+	font-family: sans-serif;
+	font-weight: 800;
+	word-spacing: -3px;
+	color: #4C0121;
+}
+.pharm-des {
+	color: #728C69;
+	font-size: 30px;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
+}
+
+#nav-bar {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+
+}
+button {
+	width: 100px;
+	height: 40px;
+	margin-top: 5px;
+	margin-right: 5px;
+	border: none;
+	background: transparent;
+	color: #354A21;
+	font-weight: 700;
+	font-size: 13px;	
+}
+.select {
+	display: none;
+	border: none;
+	margin-top: 8px;
+
+
+}
+.select a {
+	text-decoration: none;
+	font-size: 11px;
+	font-family: 'Raleway' sans-serif;
+	color: #9C9D97;
+	overflow-x: auto;
+	overflow-y: hidden;  
+}
+
+.select a:hover {
+	border-bottom: 2px solid #354A21;
+}
+button:hover .select {
+	display: inline-grid;
+	grid-gap: 10px;
+
+	}
+
+
+button:hover {
+	border-bottom: 2px snow solid;
+	transition-timing-function: ease-in-out;
+	transition-delay: 3;
+	transform: translate(-50% -50%);
+}
+
+button:hover:nth-of-type(2) {
+	border: none;
+}
+
+button:hover:nth-of-type(4) {
+	border: none;
+}
+blockquote {
+	text-align: center;
+	margin-top: 80px;
+}
+
+q {
+	background-color: #234F1E;
+	opacity: 0.6;
+	color: snow;
+	font-size: 16px;
+	font-family: 'Raleway' sans-serif;
+	font-weight: 600;
+}
+#sec-2 {
+	grid-area: 'sec-2';
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: no-wrap;
+}
+
+.det {
+	border: 2px #728C69 solid;
+	margin-top: 20px;
+	margin-right: 7px;
+	margin-left: 7px;
+	text-align: center;
+}
+
+#det-header {
+	color: #4C0121;
+	margin-top: 8px;
+	border-bottom: 2px #728C69 solid;
+}
+
+#icon {
+	font-size: 58px;
+	color: #728C69;
+
+}
+
+#sub-text {
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: 500;
+	margin-top: 40px;
+}
+
+#sec-3 {
+	background: #4C0121;
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#apt {
+	color: snow;
+	font-size: 100px;
+
+}
+#apt-txt {
+	color: snow;
+	font-size: 22px;
+	font-family: georgia;
+	margin-top: -2px;
+
+}
+
+.calender {
+	background: snow;
+	border-radius: 20px;
+	margin: 10px 10px;
+}
+
+.calender .header {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+
+}
+
+.calender ul {
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+}
+#date {
+	font-size: 1.3rem;
+	font-family: sans-serif;
+	font-weight: 700;
+}
+.calender .weeks {
+	font-weight: 600;
+	font-family: 'Teko', sans-serif;
+}
+
+.calender ul li {
+	position: relative;
+	width: calc(100% / 7);
+}
+.calender .days li {
+	margin-bottom: 20px;
+	cursor: pointer;
+	font-size: 13px;
+	z-index: 1;
+}
+
+.days li::before {
+	position: absolute;
+	content: " ";
+	width: 30px;
+	height: 30px;
+	top: 50%;
+	left: 13%;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+
+}
+
+.days li:hover::before {
+	background: grey;
+	opacity: 0.4;
+}
+
+.days .inactive {
+	color: grey;
+	opacity: 0.6;
+}
+.active::before {
+	background: #4C0121;
+	position: absolute;
+	content: " ";
+	width: 30px;
+	height: 30px;
+	top: 50%;
+	left: 13%;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+
+}
+
+.active {
+	color: snow;
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+.header #arrow span {
+	border-radius: 50%;
+	opacity: 0.6;
+	cursor: pointer;
+	z-index: -1;
+}
+
+.header #arrow span:hover {
+	background: grey;
+	opacity: 0.3;
+}
+
+#footer {
+	margin-top: 20px;
+	background: #3A3B3C;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+
+#ft-txt {
+	list-style: none;
+	color: #B0B3B8;
+	margin-bottom: 15px;
+}
+
+#footer #ft-txt li {
+	font-family: 'Teko', sans-serif;
+	letter-spacing: 2px;
+	margin-top: -3px;
+}
+
+#footer #social-icons {
+	display: flex;
+	justify-content: center;
+}
+
+img {
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+}
+
+#footer #social-icons span {
+	background-color: black;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	position: relative;
+	left: 19px;
+	margin-left: 6px;
+	margin-top: 15px;
+}
